@@ -1,0 +1,31 @@
+version: '3'
+services:
+  store_retrieve:
+    build: ./store_retrieve
+    ports:
+      - "5000:5000"
+    links:
+      - db
+  text_compare:
+    build: ./text_compare
+    ports:
+      - "5001:5001"
+    links:
+      - db
+  
+  classify:
+    build: ./classify
+    ports:
+      - "5002:5002"
+    links:
+      - db
+  
+  bankapi:
+    build: ./bankapi
+    ports:
+      - "5003:5003"
+    links:
+      - db
+
+  db:
+    build: ./db

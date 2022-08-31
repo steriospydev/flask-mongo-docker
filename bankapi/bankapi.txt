@@ -1,0 +1,35 @@
+-	Register	
+	-	url:	/register
+	-	param:	username,paswd
+	-	post
+	-	200,301[invalid user],302[invalid paswd]
+
+-	Add
+	-	url:	/add
+	-	param:	username,paswd, amount
+	-	post
+	-	200,301[invalid user],302[invalid paswd], 304[money <=0]
+
+-	Transfer
+	-	/transfer
+	-	username, paswd, to-account, amount
+	-	post
+	-	200,301[invalid user],302[invalid paswd], 303[not enough money], 304[money <=0]
+
+-	CheckBalance
+	-	/balance
+	-	username,paswd
+	-	post
+	-	200,301[invalid user],302[invalid paswd]
+
+-	TakeLoan
+	-	/takeloan
+	-	username,paswd,amount
+	-	post
+	-	200,301[invalid user],302[invalid paswd], 304[money <=0]
+
+-	PayLoan
+	-	/payloan
+	-	username,paswd,amount
+	-	post
+	-	200,301[invalid user],302[invalid paswd], 303[not enough money], 304[money <=0]

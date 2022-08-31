@@ -1,0 +1,20 @@
+-   Text Similarity:
+
+Resources: 
+    Register user
+        -   /register
+        -   post
+        -   usr/paswd
+        -   200/ok, 301/invalid user
+
+    Detect similarity in docs
+        -   /detect
+        -   post
+        -   usr/pwd/text1/text2
+        -   200/ok/return similarity,301/invalid user, 302/invalid pswd,303/out of tokens
+
+    Refill
+        -   /refill
+        -   post
+        -   usr/admin_pw
+        -   200/ok,301/invalid user,302/invalid admin_pw

@@ -1,0 +1,21 @@
+store_retrieve
+
+1.Resource    |   2.Resource     |   3.Method    |   4.parameters  |   5.Response + status code
+
++   1:  -   Register User
+    2:  -   /register
+    3:  -   POST  
+    4:  -   username, password as strings
+    5:  -   200 OK      #, 301[ex:weak password]
+
++   1:  -   Store Sentence
+    2:  -   /store
+    3:  -   POST  
+    4:  -   username, password and sentence as strings
+    5:  -   200 OK ,301['out of token'], 302['invallid username and password']    
+
++   1:  -   Retrieve Sentence
+    2:  -   /get
+    3:  -   GET  
+    4:  -   username, password 
+    5:  -   200 OK ,301['out_of_token'], 302['incorecct usrname, passwd']    

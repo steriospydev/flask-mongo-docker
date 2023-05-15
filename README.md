@@ -28,7 +28,7 @@ if the user has enough tokens.
 classify
 --------------
 Make use of keras inceptionV3. The app takes an image url and gives
-the top 5 predictions of what that image is.
+the top 5 predictions.
 
 
 bankapi
